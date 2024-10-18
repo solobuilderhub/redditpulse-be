@@ -1,13 +1,13 @@
 import { AzureOpenAI } from "openai";
 
-const baseURL = `${process.env.AZURE_OPENAI_API_ENDPOINT}/openai`;
+const endpoint = process.env.AZURE_OPENAI_API_ENDPOINT;
 const apiKey = process.env.AZURE_OPENAI_API_KEY;
 const deployment = process.env.AZURE_OPENAI_API_INSTANCE_NAME || "gpt-4o-mini";
-const apiVersion = process.env.AZURE_OPENAI_API_VERSION || "2024-07-18";
+const apiVersion = process.env.AZURE_OPENAI_API_VERSION || "2024-08-01-preview";
 
 // Azure OpenAI client
 const options = {
-  baseURL,
+  endpoint,
   apiKey,
   deployment,
   apiVersion,
