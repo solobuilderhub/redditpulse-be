@@ -99,7 +99,7 @@ export const generateMeme = async (req, res) => {
     // Call the meme generation API
     const query = `Generate meme based on the following reddit post: ${post}`;
     const response = await axios.post(
-      "https://memegen.solobuilderhub.com/api/v1/generate-meme",
+      process.env.MEME_API_URL,
       { query },
       {
         headers: {

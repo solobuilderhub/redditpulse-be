@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend service
+    ports:
+      - "9001:9001"
+    depends_on:
+      - memegen
+
+  memegen:
+    build:
+      context: ./meme service
+    ports:
+      - "9000:9000"
