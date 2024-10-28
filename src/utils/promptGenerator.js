@@ -36,13 +36,13 @@ export const generatePrompt = (persona, postBody, tone) => {
   - Niche: ${persona.niche}
   </UserPersona>
 
-  **Reply LinkedIn comment to the appropriate user:**
+  **Post**
 
   <PostContext>
   ${postBody}
   </PostContext>
 
-  Based on the above context, reply to the appropriate LinkedIn post.
+  Based on the above context, reply to the appropriate reddit post.
   Tone: ${truncatedTone}
   `;
 };

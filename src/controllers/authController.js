@@ -145,6 +145,7 @@ const checkUserExists = async (req, res) => {
 };
 
 const forgotPassword = async (req, res) => {
+  console.log("forgotPassword", req.body);
   const { email } = req.body;
 
   try {
@@ -182,6 +183,7 @@ const forgotPassword = async (req, res) => {
 };
 
 const resetPassword = async (req, res) => {
+  // console.log("resetPassword", req.body);
   const { token, newPassword } = req.body;
 
   try {
