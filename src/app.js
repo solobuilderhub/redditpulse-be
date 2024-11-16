@@ -49,7 +49,7 @@ const httpRequestDurationSeconds = new client.Histogram({
 app.use((req, res, next) => {
   const end = httpRequestDurationSeconds.startTimer();
   res.on('finish', () => {
-    // console.log("req.originalUrl --> ", req.originalUrl);
+    console.log("req.originalUrl --> ", req.originalUrl);
     const labels = {
       route: req.originalUrl, // Use originalUrl to capture the full path
       code: res.statusCode,
