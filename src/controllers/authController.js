@@ -33,7 +33,7 @@ const generateTokens = (user) => {
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -135,7 +135,7 @@ const checkUserExists = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
-    console.log(user);
+    // console.log(user);
     // Return the user details
     res.status(200).json(user);
   } catch (error) {
@@ -145,7 +145,7 @@ const checkUserExists = async (req, res) => {
 };
 
 const forgotPassword = async (req, res) => {
-  console.log("forgotPassword", req.body);
+  // console.log("forgotPassword", req.body);
   const { email } = req.body;
 
   try {
